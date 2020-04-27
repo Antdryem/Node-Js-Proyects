@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="app.js"></script>
+    <body  ng-app="pruebaModulo">
+
+        <div ng-controller="pruebaControlador">
+
+            <p>Input something in the input box:</p>
+            <p>Name : <input type="text" ng-model="nombre" placeholder="Enter name here"></p>
+            <p>
+                <button id="primero" ng-click="pruebaFuncion();">
+                    {{nombre}}
+                </button>
+            </p>
+            <h1>Hello {{nombre}}</h1>
+
+            <div ng-controller="pruebaControlador">
+                <div ng-controller="otroControlador">
+
+                    <p>Input something in the input box:</p>
+                    <p>Name : <input type="text" ng-model="nombre" placeholder="Enter name here"></p>
+                    <p>
+                        <button ng-click="pruebaFuncion2();">
+                            {{nombre}}
+                        </button>
+                    </p>
+                    <h1 onclick="document.getElementById('primero').click();">Hello {{nombre}}</h1>
+
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+<!-- CÓMO MANDAR LLAMAR LA FUNCIÓN DE CANCELAR
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2 class="example">A heading with class="example"</h2>
+<p holi="example">A paragraph with class="example".</p> 
+<input kjasnd="asd" value="77777777">
+
+<p>Click the button to add a background color all elements with class="example".</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p><strong>Note:</strong> The querySelectorAll() method is not supported in Internet Explorer 8 and earlier versions.</p>
+
+<script>
+function myFunction() {
+alert(document.querySelectorAll("input[kjasnd=asd]")[0].value);
+  var x, i;
+  x = document.querySelectorAll("p[holi=example]");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.backgroundColor = "red";
+  }
+}
+</script>
+
+</body>
+</html>
+
+
+-->
